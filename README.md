@@ -1,5 +1,6 @@
 # devops_project2022_1
-devops exercise based on https://www.youtube.com/watch?v=YuZ002YrvUA&t=1296s
+devops exercise based on https://www.youtube.com/watch?v=YuZ002YrvUA&t=1296s, and https://github.com/devopsjourney1/devops-project2021
+Many thanks for Brad! 
 
 cél:
 - lesz 4 VM, egy control (C), a többi csak node (N) 3 db
