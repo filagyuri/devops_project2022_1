@@ -11,15 +11,6 @@ cél:
 - docker-swarm-mal orchestráljuk mind a három node-ra/VM-re, akár több példányban - tehát több konténer VM-enként/node-onként, hogy a load-balancing működjön.
 ---------------
 Target:
-- there will be 4 VMs, one control (C), the other only node (N) 3 pcs
-- install on C and run ansible from there and control the other nodes from there
-- set the ansible node group based on myhost file so that the nodes can communicate
-- Python-simplejson on all VMs - do this with the Ansible nodes command to make it more functional
-- docker and docker-compose must be added to each VM and the vagrant user must be added to the docker group on each VM - this must be applied to all VMs with Ansible playbook1.yml
-- Using Dockerfile, we install a python app running on a VM, which if queried on port 5000, returns Hello World! I am .... (hostname, which will be the ID of the runner dock container). - this is only needed to test the app. Can be deleted after verification.
-- orchestrate with docker-swarm to all three nodes / VMs, even in multiple instances - so multiple containers per VM / node
-
-Target:
 - there will be 4 VMs, one control (C), the other only node (N): 3 pcs
 - install on C and run ansible from there and control the other nodes from there
 - configure the ansible node group based on the myhost file so that the nodes can communicate
