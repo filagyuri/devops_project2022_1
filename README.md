@@ -18,3 +18,21 @@ Target:
 - have docker and docker-compose on all VMs and add vagrant user to docker group on all VMs - this must be added to all VMs with Ansible playbook.yml
 - Using Dockerfile, we install a python app running on a VM, which if queried on port 5000, returns Hello World! I am .... (hostname, which will be the ID of the runner dock container)
 - orchestrate with docker-swarm to all three nodes / VMs, even in multiple instances - so multiple containers per VM / node for load-balancing to work.
+---------------
+vagrant up
+vagrant ssh control
+cd /vagrant
+sudo cp /vagrant/hosts /etc/hosts
+ssh-keygen
+ssh-copy-id node1 && ssh-copy-id node2 && ssh-copy-id node3
+sudo apt-get update -y && sudo apt-get install ansible -y
+ansible nodes -i myhosts1 -m command -a hostname
+ansible nodes -i myhosts1 -m command -a 'sudo apt-get -y install python-simplejson'
+ansible-playbook -i myhosts1 -K playbook.yml
+ansible-playbook -i myhosts2 -K swarm.yml
+ssh node1
+cd /vagrant
+docker stack deploy --compose-file docker-compose.yml myapp
+docker service scale myapp_web=6
+ssh control
+curl node1:5000
