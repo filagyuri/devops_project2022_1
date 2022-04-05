@@ -3,7 +3,7 @@ devops exercise based on https://www.youtube.com/watch?v=YuZ002YrvUA&t=1296s, an
 Many thanks for Brad! 
 
 cél:
-- lesz 4 VM, egy control (C), a többi csak node (N) 3 db
+- lesz 4 Virtualbox VM, egy control (C), a többi csak node (N) 3 db
 - a C-re telepítjük, és onnan futtatjuk az ansible-t, és arról vezéreljük a többi node-ot
 - beállítjuk az ansible node group-ot a myhost file alapján, hogy tudjanak kommunikálni a node-ok
 - minden VM-en legyen Python-simplejson - ezt Ansible nodes paranccsal tesszük fel mindegyikre, hogy több funkcionalitása legyen az ansible-nak
@@ -12,7 +12,7 @@ cél:
 - docker-swarm-mal orchestráljuk mind a három node-ra/VM-re, akár több példányban - tehát több konténer VM-enként/node-onként, hogy a load-balancing működjön.
 ---------------
 Target:
-- there will be 4 VMs, one control (C), the other only node (N): 3 pcs
+- there will be 4 Virtualbox VMs, one control (C), the other only node (N): 3 pcs
 - install on C and run ansible from there and control the other nodes from there
 - configure the ansible node group based on the myhost file so that the nodes can communicate
 - all VMs must have Python-simplejson - we put this on each of them with the Ansible nodes command to have more functionality for ansible
