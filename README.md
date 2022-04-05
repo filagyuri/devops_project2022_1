@@ -20,7 +20,9 @@ Target:
 - orchestrate with docker-swarm to all three nodes / VMs, even in multiple instances - so multiple containers per VM / node for load-balancing to work.
 ---------------
 vagrant up
+
 vagrant ssh control
+
 cd /vagrant
 sudo cp /vagrant/hosts /etc/hosts
 ssh-keygen
