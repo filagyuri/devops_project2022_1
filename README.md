@@ -1,5 +1,6 @@
 # devops_project2022_1
 devops exercise
+
 cél:
 - lesz 4 VM, egy control (C), a többi csak node (N) 3 db
 - a C-re telepítjük, és onnan futtatjuk az ansible-t, és arról vezéreljük a többi node-ot
