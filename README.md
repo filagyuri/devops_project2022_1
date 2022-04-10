@@ -1,5 +1,5 @@
 # devops_project2022_1
-devops exercise based on https://www.youtube.com/watch?v=YuZ002YrvUA&t=1296s, and https://github.com/devopsjourney1/devops-project2021
+docker-swarm exercise based on https://www.youtube.com/watch?v=YuZ002YrvUA&t=1296s, and https://github.com/devopsjourney1/devops-project2021
 Many thanks for Brad! 
 
 cél:
